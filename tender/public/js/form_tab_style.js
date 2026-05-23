@@ -236,6 +236,7 @@
 		if (!force && key === last_key) return;
 		last_key = key;
 		add_menu(frm);
+		if (doctype === "Tender") return;
 
 		load_styles(doctype).then((rows) => {
 			apply_styles(frm, rows);
