@@ -200,8 +200,13 @@
 	}
 
 	function add_menu(frm) {
-		if (!frm?.page || frm.__form_tab_style_menu_added) return;
+		if (!frm?.page) return;
 		if (!frappe.user_roles?.includes("System Manager")) return;
+		if (!frm.__form_tab_style_button_added) {
+			frm.__form_tab_style_button_added = true;
+			frm.add_custom_button(__("Tab Styles"), () => open_dialog(frm));
+		}
+		if (frm.__form_tab_style_menu_added) return;
 		frm.__form_tab_style_menu_added = true;
 		frm.page.add_menu_item(__("Customize Tab Styles"), () => open_dialog(frm), true);
 	}
@@ -306,6 +311,11 @@
 	}
 
 	install_base_css();
+	window.tender_form_tab_style = {
+		apply_current_form,
+		open_dialog,
+		apply_styles,
+	};
 	if (frappe.router?.on) {
 		frappe.router.on("change", () => {
 			setTimeout(() => apply_current_form(true), 300);
