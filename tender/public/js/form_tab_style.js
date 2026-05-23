@@ -110,6 +110,32 @@
 		return row.tab_fieldname || row.tab_label || "";
 	}
 
+	function row_from_docfield(df) {
+		if (!df || df.fieldtype !== "Tab Break") return null;
+		if (
+			!df.tab_style_icon &&
+			!df.tab_style_active_background_color &&
+			!df.tab_style_active_text_color &&
+			!df.tab_style_inactive_background_color &&
+			!df.tab_style_inactive_text_color
+		) {
+			return null;
+		}
+
+		return {
+			enabled: 1,
+			tab_fieldname: df.fieldname,
+			tab_label: df.label || df.fieldname,
+			icon: df.tab_style_icon || "none",
+			inactive_background_color: df.tab_style_inactive_background_color || "#f4f4f4",
+			inactive_text_color: df.tab_style_inactive_text_color || "#4d555a",
+			active_background_color: df.tab_style_active_background_color || "#2f8b5d",
+			active_text_color: df.tab_style_active_text_color || "#ffffff",
+			tab_height: df.tab_style_height || 74,
+			one_line_tabs: df.tab_style_one_line ?? 1,
+		};
+	}
+
 	function to_int(value, fallback) {
 		const parsed = parseInt(value, 10);
 		return Number.isFinite(parsed) ? parsed : fallback;
@@ -124,11 +150,18 @@
 		rows.forEach((row) => {
 			by_key[style_key(row)] = row;
 		});
+		fields.forEach((df) => {
+			const field_style = row_from_docfield(df);
+			if (field_style) {
+				by_key[df.fieldname] = field_style;
+			}
+		});
+		const effective_rows = fields.map((df) => by_key[df.fieldname]).filter(Boolean);
 
 		const tabs = get_tabs(frm);
 		const container = tabs.first().closest(".form-tabs, .form-tabs-list, ul, nav");
 		container.addClass("form-tab-style-tabs");
-		if (rows.some((row) => to_int(row.one_line_tabs, 0))) {
+		if (effective_rows.some((row) => to_int(row.one_line_tabs, 0))) {
 			container.addClass("form-tab-style-one-line");
 		}
 
@@ -140,7 +173,7 @@
 			const tab = $(this);
 			const fieldname = tab.attr("data-fieldname") || tab.data("fieldname") || fields[index]?.fieldname;
 			const label = tab.clone().children(".form-tab-style-icon").remove().end().text().trim();
-			const row = by_key[fieldname] || by_key[label];
+			const row = by_key[fieldname] || by_key[label] || row_from_docfield(fields[index]);
 			if (!row) return;
 
 			const active =
@@ -211,17 +244,18 @@
 
 		const table_data = fields.map((df, index) => {
 			const existing = by_fieldname[df.fieldname] || {};
+			const field_style = row_from_docfield(df) || {};
 			return {
-				enabled: existing.enabled ?? 1,
+				enabled: existing.enabled ?? field_style.enabled ?? 1,
 				tab_fieldname: df.fieldname,
 				tab_label: df.label || df.fieldname,
-				icon: existing.icon || ICONS[index + 1] || "none",
-				inactive_background_color: existing.inactive_background_color || "#f4f4f4",
-				inactive_text_color: existing.inactive_text_color || "#4d555a",
-				active_background_color: existing.active_background_color || "#2f8b5d",
-				active_text_color: existing.active_text_color || "#ffffff",
-				tab_height: existing.tab_height || 74,
-				one_line_tabs: existing.one_line_tabs ?? 1,
+				icon: field_style.icon || existing.icon || ICONS[index + 1] || "none",
+				inactive_background_color: field_style.inactive_background_color || existing.inactive_background_color || "#f4f4f4",
+				inactive_text_color: field_style.inactive_text_color || existing.inactive_text_color || "#4d555a",
+				active_background_color: field_style.active_background_color || existing.active_background_color || "#2f8b5d",
+				active_text_color: field_style.active_text_color || existing.active_text_color || "#ffffff",
+				tab_height: field_style.tab_height || existing.tab_height || 74,
+				one_line_tabs: field_style.one_line_tabs ?? existing.one_line_tabs ?? 1,
 			};
 		});
 

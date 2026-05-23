@@ -87,7 +87,14 @@
   {
    "fieldname": "basic_information_tab",
    "fieldtype": "Tab Break",
-   "label": "Basic Information"
+   "label": "Basic Information",
+   "tab_style_active_background_color": "#2f8b5d",
+   "tab_style_active_text_color": "#ffffff",
+   "tab_style_height": 74,
+   "tab_style_icon": "grid",
+   "tab_style_inactive_background_color": "#f4f4f4",
+   "tab_style_inactive_text_color": "#4d555a",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "tender_name",
@@ -180,7 +187,14 @@
   {
    "fieldname": "addresses_and_dates_tab",
    "fieldtype": "Tab Break",
-   "label": "Addresses and dates"
+   "label": "Addresses and dates",
+   "tab_style_active_background_color": "#2f8b5d",
+   "tab_style_active_text_color": "#ffffff",
+   "tab_style_height": 74,
+   "tab_style_icon": "clock",
+   "tab_style_inactive_background_color": "#f4f4f4",
+   "tab_style_inactive_text_color": "#4d555a",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "deadline_for_receiving_inquiries_section",
@@ -298,7 +312,14 @@
   {
    "fieldname": "classification_and_execution_tab",
    "fieldtype": "Tab Break",
-   "label": "Classification and Execution"
+   "label": "Classification and Execution",
+   "tab_style_active_background_color": "#2f8b5d",
+   "tab_style_active_text_color": "#ffffff",
+   "tab_style_height": 74,
+   "tab_style_icon": "list",
+   "tab_style_inactive_background_color": "#f4f4f4",
+   "tab_style_inactive_text_color": "#4d555a",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "contractor_classification_section",
@@ -371,7 +392,14 @@
   {
    "fieldname": "quantity_tables_tab",
    "fieldtype": "Tab Break",
-   "label": "Quantity Tables"
+   "label": "Quantity Tables",
+   "tab_style_active_background_color": "#2f8b5d",
+   "tab_style_active_text_color": "#ffffff",
+   "tab_style_height": 74,
+   "tab_style_icon": "table",
+   "tab_style_inactive_background_color": "#f4f4f4",
+   "tab_style_inactive_text_color": "#4d555a",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "quantity_group",
@@ -392,7 +420,14 @@
   {
    "fieldname": "attachments_tab",
    "fieldtype": "Tab Break",
-   "label": "Attachments"
+   "label": "Attachments",
+   "tab_style_active_background_color": "#2f8b5d",
+   "tab_style_active_text_color": "#ffffff",
+   "tab_style_height": 74,
+   "tab_style_icon": "paperclip",
+   "tab_style_inactive_background_color": "#f4f4f4",
+   "tab_style_inactive_text_color": "#4d555a",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "terms_and_specifications_file",
@@ -417,7 +452,14 @@
   {
    "fieldname": "competition_news_tab",
    "fieldtype": "Tab Break",
-   "label": "Competition News"
+   "label": "Competition News",
+   "tab_style_active_background_color": "#2f8b5d",
+   "tab_style_active_text_color": "#ffffff",
+   "tab_style_height": 74,
+   "tab_style_icon": "news",
+   "tab_style_inactive_background_color": "#f4f4f4",
+   "tab_style_inactive_text_color": "#4d555a",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "creation_datetime",
@@ -447,7 +489,14 @@
   {
    "fieldname": "local_content_mechanisms_tab",
    "fieldtype": "Tab Break",
-   "label": "Local Content Mechanisms"
+   "label": "Local Content Mechanisms",
+   "tab_style_active_background_color": "#2f8b5d",
+   "tab_style_active_text_color": "#ffffff",
+   "tab_style_height": 74,
+   "tab_style_icon": "home",
+   "tab_style_inactive_background_color": "#f4f4f4",
+   "tab_style_inactive_text_color": "#4d555a",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "applied_local_content_mechanisms",
@@ -467,7 +516,14 @@
   {
    "fieldname": "evaluation_criteria_tab",
    "fieldtype": "Tab Break",
-   "label": "Evaluation Criteria"
+   "label": "Evaluation Criteria",
+   "tab_style_active_background_color": "#2f8b5d",
+   "tab_style_active_text_color": "#ffffff",
+   "tab_style_height": 74,
+   "tab_style_icon": "columns",
+   "tab_style_inactive_background_color": "#f4f4f4",
+   "tab_style_inactive_text_color": "#4d555a",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "technical_evaluation_criteria",

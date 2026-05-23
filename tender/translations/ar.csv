@@ -104,3 +104,9 @@ Tab Height,ارتفاع التبويب
 Keep Tabs in One Line,إبقاء التبويبات في سطر واحد
 Tab styles saved,تم حفظ تنسيق التبويبات
 One Line,سطر واحد
+Tab Style,تنسيق التبويب
+Tab Icon,أيقونة التبويب
+Inactive Tab Background,خلفية التبويب غير النشط
+Inactive Tab Text,نص التبويب غير النشط
+Active Tab Background,خلفية التبويب النشط
+Active Tab Text,نص التبويب النشط
