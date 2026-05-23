@@ -43,16 +43,9 @@ function tender_style_tabs(frm) {
 		"Competition News": "news",
 		"Local Content Mechanisms": "home",
 		"Evaluation Criteria": "columns",
-		"المعلومات الأساسية": "grid",
-		"العناوين والمواعيد المتعلقة بالمنافسة": "clock",
-		"مجال التصنيف وموقع التنفيذ والتقديم": "list",
-		"جداول الكميات": "table",
-		"المرفقات": "paperclip",
-		"أخبار المنافسة": "news",
-		"آليات المحتوى المحلي": "home",
-		"معايير التقييم": "columns",
 	};
 
+	const icons_by_index = ["grid", "clock", "list", "table", "paperclip", "news", "home", "columns"];
 	const tab_fields = (frm.meta.fields || []).filter((df) => df.fieldtype === "Tab Break");
 	const $scope = frm.page?.wrapper ? $(frm.page.wrapper) : frm.$wrapper;
 	const $tabs = $scope.find(
@@ -63,7 +56,7 @@ function tender_style_tabs(frm) {
 		const $tab = $(this);
 		const label = $tab.clone().children(".tender-tab-icon").remove().end().text().trim();
 		const fieldname = $tab.attr("data-fieldname") || $tab.data("fieldname") || tab_fields[index]?.fieldname;
-		const icon = icons_by_fieldname[fieldname] || icons_by_label[label];
+		const icon = icons_by_fieldname[fieldname] || icons_by_label[label] || icons_by_index[index];
 
 		if (icon && !$tab.find(".tender-tab-icon").length) {
 			$tab.prepend(`<span class="tender-tab-icon" aria-hidden="true">${tender_tab_icon(icon)}</span>`);

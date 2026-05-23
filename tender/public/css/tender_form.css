@@ -18,8 +18,8 @@ body[data-route^="Form/Tender"] .breadcrumb {
 .tender-form-shell .form-layout {
 	background: #fbfcfc;
 	border: 1px solid var(--tender-border);
-	border-radius: 3px;
-	padding: 24px;
+	border-radius: 6px;
+	padding: 18px 26px;
 }
 
 .tender-form-shell .form-tabs,
@@ -27,16 +27,21 @@ body[data-route^="Form/Tender"] .breadcrumb {
 .tender-page-shell .form-tabs-list {
 	border-bottom: 0;
 	display: flex;
-	flex-wrap: wrap;
-	gap: 8px;
-	justify-content: flex-end;
-	margin: 14px 0 18px;
+	flex-wrap: nowrap;
+	gap: 5px;
+	align-items: stretch;
+	justify-content: center;
+	margin: 0 0 18px;
+	overflow: visible;
+	width: 100%;
 }
 
 .tender-form-shell .form-tabs .nav-item,
 .tender-page-shell .form-tabs .nav-item,
 .tender-page-shell .form-tabs-list .nav-item {
 	margin: 0;
+	flex: 1 1 0;
+	min-width: 0;
 }
 
 .tender-form-shell .form-tabs .nav-link,
@@ -50,19 +55,27 @@ body[data-route^="Form/Tender"] .breadcrumb {
 	border: 0;
 	border-radius: 2px;
 	box-shadow: 0 1px 6px rgba(31, 63, 54, 0.05);
-	color: #555;
+	color: #4d555a !important;
 	display: flex;
 	flex-direction: column;
-	font-size: 11px;
-	font-weight: 600;
-	gap: 8px;
+	font-size: 10.5px;
+	font-weight: 700;
+	gap: 5px;
 	justify-content: center;
 	line-height: 1.4;
-	min-height: 86px;
-	min-width: 104px;
-	padding: 12px 14px;
+	min-height: 74px;
+	min-width: 0;
+	padding: 9px 6px;
 	text-align: center;
 	white-space: normal;
+	width: 100%;
+	word-break: normal;
+}
+
+.tender-form-shell .form-tabs .nav-link .tender-tab-icon + *,
+.tender-page-shell .form-tabs .nav-link .tender-tab-icon + *,
+.tender-page-shell .form-tabs-list .nav-link .tender-tab-icon + * {
+	min-width: 0;
 }
 
 .tender-form-shell .form-tabs .nav-link.active,
@@ -82,22 +95,38 @@ body[data-route^="Form/Tender"] .breadcrumb {
 	color: #fff !important;
 }
 
+.tender-form-shell .form-tabs .nav-link.active *,
+.tender-form-shell .form-tabs .nav-link[aria-selected="true"] *,
+.tender-form-shell .form-tabs a.active *,
+.tender-form-shell .form-tabs .nav-item.active > .nav-link *,
+.tender-page-shell .form-tabs .nav-link.active *,
+.tender-page-shell .form-tabs .nav-link[aria-selected="true"] *,
+.tender-page-shell .form-tabs a.active *,
+.tender-page-shell .form-tabs .nav-item.active > .nav-link *,
+.tender-page-shell .form-tabs-list .nav-link.active *,
+.tender-page-shell .form-tabs-list .nav-link[aria-selected="true"] *,
+.tender-page-shell .form-tabs-list .nav-item.active > .nav-link *,
+.tender-page-shell .form-tabs-list a.active * {
+	color: #fff !important;
+	stroke: #fff !important;
+}
+
 .tender-form-shell .tender-tab-icon,
 .tender-page-shell .tender-tab-icon {
 	color: currentColor;
 	display: block;
-	font-size: 25px;
-	height: 25px;
+	font-size: 22px;
+	height: 22px;
 	line-height: 1;
-	margin-bottom: 3px;
-	width: 25px;
+	margin-bottom: 2px;
+	width: 22px;
 }
 
 .tender-form-shell .tender-tab-icon svg,
 .tender-page-shell .tender-tab-icon svg {
 	display: block;
-	height: 25px;
-	width: 25px;
+	height: 22px;
+	width: 22px;
 }
 
 .tender-form-shell .form-section,
