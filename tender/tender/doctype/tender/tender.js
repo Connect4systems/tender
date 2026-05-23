@@ -3,16 +3,140 @@
 
 frappe.ui.form.on("Tender", {
 	refresh(frm) {
+		tender_install_styles();
 		tender_mark_form(frm);
 		tender_style_tabs(frm);
 		setTimeout(() => tender_style_tabs(frm), 100);
+		setTimeout(() => tender_style_tabs(frm), 500);
 	},
 	onload_post_render(frm) {
+		tender_install_styles();
 		tender_mark_form(frm);
 		tender_style_tabs(frm);
 		setTimeout(() => tender_style_tabs(frm), 100);
+		setTimeout(() => tender_style_tabs(frm), 500);
 	},
 });
+
+function tender_install_styles() {
+	if (document.getElementById("tender-inline-form-style")) {
+		return;
+	}
+
+	const style = document.createElement("style");
+	style.id = "tender-inline-form-style";
+	style.textContent = `
+		.tender-page-shell,
+		.tender-form-shell {
+			--tender-green: #2f8b5d;
+			--tender-green-dark: #155c4f;
+			--tender-border: #d8dde1;
+			--tender-text: #244f47;
+		}
+
+		.tender-form-shell .form-layout {
+			background: #fbfcfc !important;
+			border: 1px solid var(--tender-border) !important;
+			border-radius: 6px !important;
+			padding: 18px 26px !important;
+		}
+
+		.tender-tabs-enhanced {
+			border-bottom: 0 !important;
+			display: flex !important;
+			flex-wrap: nowrap !important;
+			gap: 5px !important;
+			justify-content: center !important;
+			margin: 0 0 18px !important;
+			overflow: visible !important;
+			width: 100% !important;
+		}
+
+		.tender-tabs-enhanced > li,
+		.tender-tabs-enhanced > .nav-item {
+			flex: 1 1 0 !important;
+			margin: 0 !important;
+			min-width: 0 !important;
+		}
+
+		.tender-tabs-enhanced a,
+		.tender-tabs-enhanced .nav-link {
+			align-items: center !important;
+			background: #f4f4f4 !important;
+			border: 0 !important;
+			border-radius: 2px !important;
+			box-shadow: 0 1px 6px rgba(31, 63, 54, 0.05) !important;
+			color: #4d555a !important;
+			display: flex !important;
+			flex-direction: column !important;
+			font-size: 10.5px !important;
+			font-weight: 700 !important;
+			gap: 5px !important;
+			height: 74px !important;
+			justify-content: center !important;
+			line-height: 1.3 !important;
+			min-height: 74px !important;
+			min-width: 0 !important;
+			overflow: hidden !important;
+			padding: 9px 5px !important;
+			text-align: center !important;
+			text-decoration: none !important;
+			white-space: normal !important;
+			width: 100% !important;
+		}
+
+		.tender-tabs-enhanced a.active,
+		.tender-tabs-enhanced a[aria-selected="true"],
+		.tender-tabs-enhanced .nav-link.active,
+		.tender-tabs-enhanced .nav-link[aria-selected="true"],
+		.tender-tabs-enhanced .nav-item.active > a,
+		.tender-tabs-enhanced .nav-item.active > .nav-link,
+		.tender-tabs-enhanced .tender-tab-active {
+			background: var(--tender-green) !important;
+			box-shadow: 0 4px 10px rgba(47, 139, 93, 0.28) !important;
+			color: #fff !important;
+		}
+
+		.tender-tabs-enhanced a.active *,
+		.tender-tabs-enhanced a[aria-selected="true"] *,
+		.tender-tabs-enhanced .nav-link.active *,
+		.tender-tabs-enhanced .nav-link[aria-selected="true"] *,
+		.tender-tabs-enhanced .nav-item.active > a *,
+		.tender-tabs-enhanced .nav-item.active > .nav-link *,
+		.tender-tabs-enhanced .tender-tab-active * {
+			color: #fff !important;
+			stroke: #fff !important;
+		}
+
+		.tender-tab-icon {
+			color: currentColor !important;
+			display: block !important;
+			height: 22px !important;
+			line-height: 1 !important;
+			margin-bottom: 2px !important;
+			width: 22px !important;
+		}
+
+		.tender-tab-icon svg {
+			display: block !important;
+			height: 22px !important;
+			width: 22px !important;
+		}
+
+		.tender-form-shell .section-head {
+			color: var(--tender-green) !important;
+			font-weight: 700 !important;
+		}
+
+		.tender-form-shell .grid-heading-row,
+		.tender-form-shell .grid-header,
+		.tender-form-shell .datatable .dt-header {
+			background: var(--tender-green) !important;
+			color: #fff !important;
+		}
+	`;
+	document.head.appendChild(style);
+}
 
 function tender_mark_form(frm) {
 	frm.$wrapper.addClass("tender-form-shell");
@@ -52,6 +176,12 @@ function tender_style_tabs(frm) {
 		".form-tabs a.nav-link, .form-tabs a, .form-tabs-list a.nav-link, .form-tabs-list a"
 	);
 
+	const $tab_container = $tabs.first().closest(".form-tabs, .form-tabs-list, ul, nav");
+	$tab_container.addClass("tender-tabs-enhanced");
+	$tab_container.off("click.tender_tabs").on("click.tender_tabs", "a", () => {
+		setTimeout(() => tender_style_tabs(frm), 30);
+	});
+
 	$tabs.each(function (index) {
 		const $tab = $(this);
 		const label = $tab.clone().children(".tender-tab-icon").remove().end().text().trim();
@@ -61,6 +191,12 @@ function tender_style_tabs(frm) {
 		if (icon && !$tab.find(".tender-tab-icon").length) {
 			$tab.prepend(`<span class="tender-tab-icon" aria-hidden="true">${tender_tab_icon(icon)}</span>`);
 		}
+
+		const is_active =
+			$tab.hasClass("active") ||
+			$tab.attr("aria-selected") === "true" ||
+			$tab.parent().hasClass("active");
+		$tab.toggleClass("tender-tab-active", is_active);
 	});
 }
 

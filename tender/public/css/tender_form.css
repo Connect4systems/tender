@@ -24,7 +24,8 @@ body[data-route^="Form/Tender"] .breadcrumb {
 
 .tender-form-shell .form-tabs,
 .tender-page-shell .form-tabs,
-.tender-page-shell .form-tabs-list {
+.tender-page-shell .form-tabs-list,
+.tender-tabs-enhanced {
 	border-bottom: 0;
 	display: flex;
 	flex-wrap: nowrap;
@@ -38,7 +39,9 @@ body[data-route^="Form/Tender"] .breadcrumb {
 
 .tender-form-shell .form-tabs .nav-item,
 .tender-page-shell .form-tabs .nav-item,
-.tender-page-shell .form-tabs-list .nav-item {
+.tender-page-shell .form-tabs-list .nav-item,
+.tender-tabs-enhanced > li,
+.tender-tabs-enhanced > .nav-item {
 	margin: 0;
 	flex: 1 1 0;
 	min-width: 0;
@@ -49,7 +52,9 @@ body[data-route^="Form/Tender"] .breadcrumb {
 .tender-page-shell .form-tabs .nav-link,
 .tender-page-shell .form-tabs a,
 .tender-page-shell .form-tabs-list .nav-link,
-.tender-page-shell .form-tabs-list a {
+.tender-page-shell .form-tabs-list a,
+.tender-tabs-enhanced a,
+.tender-tabs-enhanced .nav-link {
 	align-items: center;
 	background: #f4f4f4;
 	border: 0;
@@ -89,7 +94,14 @@ body[data-route^="Form/Tender"] .breadcrumb {
 .tender-page-shell .form-tabs-list .nav-link.active,
 .tender-page-shell .form-tabs-list .nav-link[aria-selected="true"],
 .tender-page-shell .form-tabs-list .nav-item.active > .nav-link,
-.tender-page-shell .form-tabs-list a.active {
+.tender-page-shell .form-tabs-list a.active,
+.tender-tabs-enhanced a.active,
+.tender-tabs-enhanced a[aria-selected="true"],
+.tender-tabs-enhanced .nav-link.active,
+.tender-tabs-enhanced .nav-link[aria-selected="true"],
+.tender-tabs-enhanced .nav-item.active > a,
+.tender-tabs-enhanced .nav-item.active > .nav-link,
+.tender-tabs-enhanced .tender-tab-active {
 	background: var(--tender-green) !important;
 	box-shadow: 0 4px 10px rgba(47, 139, 93, 0.28);
 	color: #fff !important;
@@ -106,7 +118,14 @@ body[data-route^="Form/Tender"] .breadcrumb {
 .tender-page-shell .form-tabs-list .nav-link.active *,
 .tender-page-shell .form-tabs-list .nav-link[aria-selected="true"] *,
 .tender-page-shell .form-tabs-list .nav-item.active > .nav-link *,
-.tender-page-shell .form-tabs-list a.active * {
+.tender-page-shell .form-tabs-list a.active *,
+.tender-tabs-enhanced a.active *,
+.tender-tabs-enhanced a[aria-selected="true"] *,
+.tender-tabs-enhanced .nav-link.active *,
+.tender-tabs-enhanced .nav-link[aria-selected="true"] *,
+.tender-tabs-enhanced .nav-item.active > a *,
+.tender-tabs-enhanced .nav-item.active > .nav-link *,
+.tender-tabs-enhanced .tender-tab-active * {
 	color: #fff !important;
 	stroke: #fff !important;
 }
