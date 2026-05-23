@@ -1,0 +1,159 @@
+/* Tender form theme, scoped to the Tender DocType only. */
+.tender-form-shell {
+	--tender-green: #2f8b5d;
+	--tender-green-dark: #155c4f;
+	--tender-border: #d8dde1;
+	--tender-muted: #eef1f3;
+	--tender-panel: #ffffff;
+	--tender-text: #244f47;
+	color: var(--tender-text);
+}
+
+body[data-route^="Form/Tender"] .page-title .title-text,
+body[data-route^="Form/Tender"] .breadcrumb {
+	color: var(--tender-green-dark, #155c4f);
+}
+
+.tender-form-shell .form-layout {
+	background: #fbfcfc;
+	border: 1px solid var(--tender-border);
+	border-radius: 3px;
+	padding: 24px;
+}
+
+.tender-form-shell .form-tabs {
+	border-bottom: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	justify-content: flex-end;
+	margin: 14px 0 18px;
+}
+
+.tender-form-shell .form-tabs .nav-item {
+	margin: 0;
+}
+
+.tender-form-shell .form-tabs .nav-link,
+.tender-form-shell .form-tabs a {
+	align-items: center;
+	background: #f4f4f4;
+	border: 0;
+	border-radius: 2px;
+	box-shadow: 0 1px 6px rgba(31, 63, 54, 0.05);
+	color: #555;
+	display: flex;
+	flex-direction: column;
+	font-size: 11px;
+	font-weight: 600;
+	gap: 8px;
+	justify-content: center;
+	line-height: 1.4;
+	min-height: 86px;
+	min-width: 104px;
+	padding: 12px 14px;
+	text-align: center;
+	white-space: normal;
+}
+
+.tender-form-shell .form-tabs .nav-link.active,
+.tender-form-shell .form-tabs .nav-link[aria-selected="true"],
+.tender-form-shell .form-tabs a.active {
+	background: var(--tender-green);
+	box-shadow: 0 4px 10px rgba(47, 139, 93, 0.28);
+	color: #fff;
+}
+
+.tender-form-shell .tender-tab-icon {
+	color: currentColor;
+	font-size: 24px;
+	line-height: 1;
+}
+
+.tender-form-shell .form-section,
+.tender-form-shell .section-body {
+	border-color: var(--tender-border);
+}
+
+.tender-form-shell .section-head,
+.tender-form-shell .form-section .section-head {
+	color: var(--tender-green);
+	font-size: 15px;
+	font-weight: 600;
+	text-align: right;
+}
+
+.tender-form-shell .control-label {
+	color: #2a5149;
+	font-weight: 600;
+}
+
+.tender-form-shell .form-control,
+.tender-form-shell .awesomplete .input-with-feedback,
+.tender-form-shell .input-with-feedback {
+	border-color: var(--tender-border);
+	border-radius: 2px;
+	color: var(--tender-text);
+}
+
+.tender-form-shell .frappe-control[data-fieldtype="Check"] .label-area {
+	color: var(--tender-text);
+}
+
+.tender-form-shell .grid-heading-row,
+.tender-form-shell .grid-header,
+.tender-form-shell .datatable .dt-header {
+	background: var(--tender-green);
+	color: #fff;
+}
+
+.tender-form-shell .grid-heading-row .grid-static-col,
+.tender-form-shell .datatable .dt-cell__content {
+	color: inherit;
+	font-weight: 600;
+}
+
+.tender-form-shell .grid-row > .row .col,
+.tender-form-shell .grid-static-col {
+	border-color: var(--tender-border);
+}
+
+.tender-form-shell .btn-primary,
+.tender-form-shell .btn[data-label*="Save"] {
+	background-color: var(--tender-green);
+	border-color: var(--tender-green);
+}
+
+.tender-form-shell .btn-primary:hover,
+.tender-form-shell .btn[data-label*="Save"]:hover {
+	background-color: var(--tender-green-dark);
+	border-color: var(--tender-green-dark);
+}
+
+.tender-form-shell .btn-secondary,
+.tender-form-shell .btn-default {
+	border-color: var(--tender-green);
+	color: var(--tender-green-dark);
+}
+
+[dir="rtl"] .tender-form-shell .form-tabs,
+.tender-form-shell[dir="rtl"] .form-tabs {
+	direction: rtl;
+}
+
+@media (max-width: 768px) {
+	.tender-form-shell .form-layout {
+		padding: 14px;
+	}
+
+	.tender-form-shell .form-tabs {
+		justify-content: stretch;
+	}
+
+	.tender-form-shell .form-tabs .nav-item,
+	.tender-form-shell .form-tabs .nav-link,
+	.tender-form-shell .form-tabs a {
+		flex: 1 1 120px;
+		min-width: 0;
+	}
+}
