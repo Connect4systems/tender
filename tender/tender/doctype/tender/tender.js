@@ -10,10 +10,6 @@ frappe.ui.form.on("Tender", {
 });
 
 function apply_tender_tab_fallback(frm) {
-	if (window.tender_form_tab_style) {
-		window.tender_form_tab_style.apply_current_form(true);
-	}
-
 	if (!document.getElementById("tender-tab-fallback-style")) {
 		const style = document.createElement("style");
 		style.id = "tender-tab-fallback-style";
@@ -126,7 +122,7 @@ function apply_tender_tab_fallback(frm) {
 			"width": "100%",
 		});
 		tab.find("*").css({ color: color, stroke: color });
-		tab.children(".tender-fallback-icon").remove();
+		tab.children(".tender-fallback-icon, .form-tab-style-icon").remove();
 		tab.prepend(`<span class="tender-fallback-icon" aria-hidden="true">${tender_fallback_icon(icons[index] || "grid")}</span>`);
 	});
 }
