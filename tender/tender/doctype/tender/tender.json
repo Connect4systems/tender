@@ -1,0 +1,290 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-05-23 13:06:27.487079",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "basic_information_tab",
+  "tender_name",
+  "tender_nomber",
+  "tender_purpose",
+  "tender_decumatation_fees",
+  "tender_position",
+  "contract_period",
+  "insurance_required",
+  "column_break_fwgv",
+  "tender_type",
+  "tender_status",
+  "goverment_section",
+  "tender_offering_method",
+  "initial_guarantee_required",
+  "primary_warranty_address",
+  "final_guarantee",
+  "addresses_and_dates_tab",
+  "deadline_for_receiving_inquiries_section",
+  "gregorian_date",
+  "column_break_scrb",
+  "hijri_date",
+  "column_break_oeca",
+  "time",
+  "deadline_for_submitting_offers_section",
+  "offer_gregorian_date",
+  "column_break_hoee",
+  "offer_hijri_date",
+  "column_break_govh",
+  "offer_time",
+  "bid_opening_date_section",
+  "open_gregorian_date",
+  "column_break_rurq",
+  "open_hijri_date",
+  "column_break_aefo",
+  "open_time",
+  "date_of_screening_offers_section",
+  "screening",
+  "column_break_ezkc",
+  "screening_gregorian_date",
+  "column_break_cngu",
+  "screening_hijri_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "basic_information_tab",
+   "fieldtype": "Tab Break",
+   "label": "Basic Information"
+  },
+  {
+   "fieldname": "tender_name",
+   "fieldtype": "Data",
+   "label": "Tender Name",
+   "translatable": 1
+  },
+  {
+   "fieldname": "tender_nomber",
+   "fieldtype": "Float",
+   "label": "Tender Nomber",
+   "precision": "0"
+  },
+  {
+   "fieldname": "tender_purpose",
+   "fieldtype": "Data",
+   "label": "Tender purpose"
+  },
+  {
+   "fieldname": "tender_decumatation_fees",
+   "fieldtype": "Currency",
+   "label": "Tender Decumatation Fees",
+   "precision": "0"
+  },
+  {
+   "fieldname": "tender_position",
+   "fieldtype": "Select",
+   "label": "Tender Official Status",
+   "options": "Draft\nPending\nApproved"
+  },
+  {
+   "fieldname": "contract_period",
+   "fieldtype": "Float",
+   "label": "Contract Period (Month)",
+   "precision": "0"
+  },
+  {
+   "fieldname": "insurance_required",
+   "fieldtype": "Select",
+   "label": "Insurance Required",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "column_break_fwgv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tender_type",
+   "fieldtype": "Select",
+   "label": "Tender Type",
+   "options": "General Tender"
+  },
+  {
+   "fieldname": "tender_status",
+   "fieldtype": "Data",
+   "label": "Tender Status",
+   "translatable": 1
+  },
+  {
+   "fieldname": "goverment_section",
+   "fieldtype": "Data",
+   "label": "Goverment Section",
+   "translatable": 1
+  },
+  {
+   "fieldname": "tender_offering_method",
+   "fieldtype": "Select",
+   "label": "Tender Offering Method",
+   "options": "Finantial and Technical Together\nFinancial and technical",
+   "translatable": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "initial_guarantee_required",
+   "fieldtype": "Select",
+   "label": "Initial guarantee required",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "primary_warranty_address",
+   "fieldtype": "Data",
+   "label": "Primary warranty address",
+   "translatable": 1
+  },
+  {
+   "fieldname": "final_guarantee",
+   "fieldtype": "Currency",
+   "label": "Final guarantee"
+  },
+  {
+   "fieldname": "addresses_and_dates_tab",
+   "fieldtype": "Tab Break",
+   "label": "Addresses and dates"
+  },
+  {
+   "fieldname": "deadline_for_receiving_inquiries_section",
+   "fieldtype": "Section Break",
+   "label": "Deadline for receiving inquiries"
+  },
+  {
+   "fieldname": "gregorian_date",
+   "fieldtype": "Date",
+   "label": "Gregorian date"
+  },
+  {
+   "fieldname": "column_break_scrb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "hijri_date",
+   "fieldtype": "Date",
+   "label": "Hijri date"
+  },
+  {
+   "fieldname": "column_break_oeca",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "label": "Time"
+  },
+  {
+   "fieldname": "deadline_for_submitting_offers_section",
+   "fieldtype": "Section Break",
+   "label": "Deadline for submitting offers"
+  },
+  {
+   "fieldname": "offer_gregorian_date",
+   "fieldtype": "Date",
+   "label": "Offer Gregorian date"
+  },
+  {
+   "fieldname": "column_break_hoee",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "offer_hijri_date",
+   "fieldtype": "Date",
+   "label": "Offer Hijri date"
+  },
+  {
+   "fieldname": "column_break_govh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "offer_time",
+   "fieldtype": "Time",
+   "label": "Offer Time"
+  },
+  {
+   "fieldname": "bid_opening_date_section",
+   "fieldtype": "Section Break",
+   "label": "Bid opening date"
+  },
+  {
+   "fieldname": "open_gregorian_date",
+   "fieldtype": "Date",
+   "label": "Open Gregorian date"
+  },
+  {
+   "fieldname": "column_break_rurq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "open_hijri_date",
+   "fieldtype": "Date",
+   "label": "Open Hijri date"
+  },
+  {
+   "fieldname": "column_break_aefo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "open_time",
+   "fieldtype": "Time",
+   "label": "Open Time"
+  },
+  {
+   "fieldname": "date_of_screening_offers_section",
+   "fieldtype": "Section Break",
+   "label": "Date of screening offers"
+  },
+  {
+   "fieldname": "screening",
+   "fieldtype": "Select",
+   "label": "Screening",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "column_break_ezkc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "screening_gregorian_date",
+   "fieldtype": "Date",
+   "label": "Screening Gregorian date"
+  },
+  {
+   "fieldname": "column_break_cngu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "screening_hijri_date",
+   "fieldtype": "Date",
+   "label": "Screening Hijri date Copy"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-05-23 14:04:36.282356",
+ "modified_by": "Administrator",
+ "module": "Tender",
+ "name": "Tender",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
