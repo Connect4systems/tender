@@ -12,7 +12,6 @@ frappe.ui.form.on("Tender", {
 function apply_tender_tab_fallback(frm) {
 	if (window.tender_form_tab_style) {
 		window.tender_form_tab_style.apply_current_form(true);
-		return;
 	}
 
 	if (!document.getElementById("tender-tab-fallback-style")) {
@@ -80,7 +79,12 @@ function apply_tender_tab_fallback(frm) {
 
 	const icons = ["grid", "clock", "list", "table", "paperclip", "news", "home", "columns"];
 	const scope = frm.page?.wrapper ? $(frm.page.wrapper) : frm.$wrapper;
-	const tabs = scope.find(".form-tabs a.nav-link, .form-tabs a, .form-tabs-list a.nav-link, .form-tabs-list a");
+	const tabs = scope.find(
+		".form-tabs a.nav-link, .form-tabs a, .form-tabs button, .form-tabs [role='tab'], " +
+		".form-tabs-list a.nav-link, .form-tabs-list a, .form-tabs-list button, .form-tabs-list [role='tab']"
+	);
+	if (!tabs.length) return;
+
 	const container = tabs.first().closest(".form-tabs, .form-tabs-list, ul, nav");
 	container.addClass("tender-fallback-tabs");
 	container.off("click.tender_fallback").on("click.tender_fallback", "a", () => {
@@ -89,6 +93,39 @@ function apply_tender_tab_fallback(frm) {
 
 	tabs.each(function (index) {
 		const tab = $(this);
+		const is_active =
+			tab.hasClass("active") ||
+			tab.hasClass("selected") ||
+			tab.attr("aria-selected") === "true" ||
+			tab.attr("data-active") === "true" ||
+			tab.parent().hasClass("active") ||
+			tab.css("font-weight") === "700" ||
+			tab.css("font-weight") === "bold";
+		const color = is_active ? "#ffffff" : "#4d555a";
+
+		tab.css({
+			"align-items": "center",
+			"background": is_active ? "#2f8b5d" : "#f4f4f4",
+			"border": "0",
+			"border-radius": "3px",
+			"box-shadow": is_active ? "0 4px 10px rgba(47, 139, 93, 0.28)" : "0 1px 6px rgba(31, 63, 54, 0.05)",
+			"color": color,
+			"display": "flex",
+			"flex-direction": "column",
+			"font-size": "10.5px",
+			"font-weight": "700",
+			"gap": "5px",
+			"height": "74px",
+			"justify-content": "center",
+			"line-height": "1.3",
+			"min-width": "0",
+			"padding": "9px 5px",
+			"text-align": "center",
+			"text-decoration": "none",
+			"white-space": "normal",
+			"width": "100%",
+		});
+		tab.find("*").css({ color: color, stroke: color });
 		tab.children(".tender-fallback-icon").remove();
 		tab.prepend(`<span class="tender-fallback-icon" aria-hidden="true">${tender_fallback_icon(icons[index] || "grid")}</span>`);
 	});

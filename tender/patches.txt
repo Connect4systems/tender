@@ -6,3 +6,4 @@ tender.patches.create_docfield_tab_style_fields
 [post_model_sync]
 # Patches added in this section will be executed after doctypes are migrated
 tender.patches.create_default_tender_tab_styles
+tender.patches.ensure_tender_tab_style_ui

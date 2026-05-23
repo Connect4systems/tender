@@ -96,7 +96,10 @@
 
 	function get_tabs(frm) {
 		const scope = frm.page?.wrapper ? $(frm.page.wrapper) : frm.$wrapper;
-		return scope.find(".form-tabs a.nav-link, .form-tabs a, .form-tabs-list a.nav-link, .form-tabs-list a");
+		return scope.find(
+			".form-tabs a.nav-link, .form-tabs a, .form-tabs button, .form-tabs [role='tab'], " +
+			".form-tabs-list a.nav-link, .form-tabs-list a, .form-tabs-list button, .form-tabs-list [role='tab']"
+		);
 	}
 
 	function tab_fields(frm) {
@@ -178,7 +181,9 @@
 
 			const active =
 				tab.hasClass("active") ||
+				tab.hasClass("selected") ||
 				tab.attr("aria-selected") === "true" ||
+				tab.attr("data-active") === "true" ||
 				tab.parent().hasClass("active");
 			const bg = active ? row.active_background_color : row.inactive_background_color;
 			const color = active ? row.active_text_color : row.inactive_text_color;
