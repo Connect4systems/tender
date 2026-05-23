@@ -88,18 +88,18 @@ def add_docfield_columns():
 
 def add_docfield_table_columns():
 	columns = {
-		"tab_style_icon": "Data",
-		"tab_style_inactive_background_color": "Data",
-		"tab_style_inactive_text_color": "Data",
-		"tab_style_active_background_color": "Data",
-		"tab_style_active_text_color": "Data",
-		"tab_style_height": "Int",
-		"tab_style_one_line": "Check",
+		"tab_style_icon": "varchar(140)",
+		"tab_style_inactive_background_color": "varchar(140)",
+		"tab_style_inactive_text_color": "varchar(140)",
+		"tab_style_active_background_color": "varchar(140)",
+		"tab_style_active_text_color": "varchar(140)",
+		"tab_style_height": "int(11) default 74",
+		"tab_style_one_line": "int(1) default 1",
 	}
 
-	for column_name, fieldtype in columns.items():
+	for column_name, column_type in columns.items():
 		if not frappe.db.has_column("DocField", column_name):
-			frappe.db.add_column("DocField", column_name, fieldtype)
+			frappe.db.sql(f"alter table `tabDocField` add column `{column_name}` {column_type}")
 
 
 def add_docfield_property_setters():
