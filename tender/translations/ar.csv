@@ -1,0 +1,92 @@
+Tender,المنافسة
+Basic Information,المعلومات الأساسية
+Tender Name,اسم المنافسة
+Tender Number,رقم المنافسة
+Tender Purpose,الغرض من المنافسة
+Tender Documentation Fees,قيمة وثائق المنافسة
+Tender Official Status,حالة المنافسة
+Contract Period (Month),مدة العقد بالشهر
+Insurance Required,هل التأمين من متطلبات المنافسة
+Tender Type,نوع المنافسة
+Tender Status,حالة العرض
+Government Section,الجهة الحكومية
+Tender Offering Method,طريقة تقديم العروض
+Initial guarantee required,مطلوب ضمان ابتدائي
+Primary warranty address,عنوان الضمان الابتدائي
+Final guarantee,الضمان النهائي
+Addresses and dates,العناوين والمواعيد المتعلقة بالمنافسة
+Deadline for receiving inquiries,آخر موعد لاستلام الاستفسارات
+Gregorian date,التاريخ الميلادي
+Hijri date,التاريخ الهجري
+Time,الوقت
+Deadline for submitting offers,آخر موعد لتقديم العروض
+Offer Gregorian date,تاريخ تقديم العروض ميلادي
+Offer Hijri date,تاريخ تقديم العروض هجري
+Offer Time,وقت تقديم العروض
+Bid opening date,تاريخ فتح العروض
+Open Gregorian date,تاريخ فتح العروض ميلادي
+Open Hijri date,تاريخ فتح العروض هجري
+Open Time,وقت فتح العروض
+Date of screening offers,تاريخ فحص العروض
+Screening,فحص العروض
+Screening Gregorian date,تاريخ الفحص ميلادي
+Screening Hijri Date,تاريخ الفحص هجري
+Classification and Execution,مجال التصنيف وموقع التنفيذ والتقديم
+Contractor Classification,تصنيف المقاولين
+Classification Required,مجال التصنيف
+Not Required,غير مطلوب
+Required,مطلوب
+Classification Details,تفاصيل التصنيف
+Execution Location and Delivery Site,مجال التصنيف وموقع التنفيذ والتقديم
+Execution Place,مكان التنفيذ
+Execution Region,منطقة التنفيذ
+Execution City,مدينة التنفيذ
+Execution Details,التفاصيل
+Competition Activity,نشاط المنافسة
+Includes Supply Items,تشمل المنافسة على بنود توريد
+Yes,نعم
+No,لا
+Construction Works,أعمال الإنشاء
+Maintenance and Operation Works,أعمال الصيانة والتشغيل
+Quantity Tables,جداول الكميات
+Quantity Group,مجموعة الكميات
+Quantity Table Name,اسم الجدول
+Quantity Items,بنود الكميات
+Tender Quantity Item,بند كميات المنافسة
+Serial Number,الرقم التسلسلي
+Category,الفئة
+Item,البند
+Item Description,وصف البند
+Quantity,الكمية
+Unit of Measure,وحدة القياس
+Specifications,المواصفات
+Manufactured Product,منتج من القائمة الإلزامية
+Origin Country,بلد المنشأ
+Attachments,المرفقات
+Terms and Specifications File,كراسة الشروط والمواصفات وملحق المنافسة
+Supporting File,ملف داعم
+Local Content Supporting File,ملف داعم لآليات المحتوى المحلي
+Attachment Notes,ملاحظات المرفقات
+Competition News,أخبار المنافسة
+Creation Date,تاريخ الإنشاء
+Invitation Sent Date,تاريخ إرسال الدعوات
+Award Date,تاريخ الترسية
+Competition News Notes,ملاحظات أخبار المنافسة
+Local Content Mechanisms,آليات المحتوى المحلي
+Applied Local Content Mechanisms,آليات المحتوى المحلي المطبقة
+Local Content Terms File,ملحق الشروط والأحكام لآلية تفضيل المحتوى الوطني
+Local Content Notes,ملاحظات المحتوى المحلي
+Evaluation Criteria,معايير التقييم
+Tender Evaluation Criterion,معيار تقييم المنافسة
+Technical Evaluation Criteria,معايير التقييم الفني
+Financial Evaluation Criteria,معايير التقييم المالي
+Level One,المستوى الأول
+Level Two,المستوى الثاني
+Level Three,المستوى الثالث
+Final Weight,الوزن النهائي
+General Tender,منافسة عامة
+Draft,مسودة
+Pending,قيد الانتظار
+Approved,معتمدة
+Finantial and Technical Together,ملف واحد للعرض الفني والمالي معا
+Financial and technical,العرض الفني والمالي

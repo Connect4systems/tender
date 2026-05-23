@@ -45,7 +45,43 @@
   "column_break_ezkc",
   "screening_gregorian_date",
   "column_break_cngu",
-  "screening_hijri_date"
+  "screening_hijri_date",
+  "classification_and_execution_tab",
+  "contractor_classification_section",
+  "classification_required",
+  "classification_details",
+  "execution_location_section",
+  "execution_place",
+  "execution_region",
+  "execution_city",
+  "execution_details",
+  "column_break_execution",
+  "competition_activity",
+  "includes_supply_items",
+  "construction_works",
+  "maintenance_and_operation_works",
+  "quantity_tables_tab",
+  "quantity_group",
+  "quantity_table_name",
+  "quantity_items",
+  "attachments_tab",
+  "terms_and_specifications_file",
+  "supporting_file",
+  "local_content_supporting_file",
+  "attachment_notes",
+  "competition_news_tab",
+  "creation_datetime",
+  "news_bid_opening_datetime",
+  "invitation_sent_date",
+  "award_date",
+  "competition_news_notes",
+  "local_content_mechanisms_tab",
+  "applied_local_content_mechanisms",
+  "local_content_terms_file",
+  "local_content_notes",
+  "evaluation_criteria_tab",
+  "technical_evaluation_criteria",
+  "financial_evaluation_criteria"
  ],
  "fields": [
   {
@@ -62,18 +98,18 @@
   {
    "fieldname": "tender_nomber",
    "fieldtype": "Float",
-   "label": "Tender Nomber",
+   "label": "Tender Number",
    "precision": "0"
   },
   {
    "fieldname": "tender_purpose",
    "fieldtype": "Data",
-   "label": "Tender purpose"
+   "label": "Tender Purpose"
   },
   {
    "fieldname": "tender_decumatation_fees",
    "fieldtype": "Currency",
-   "label": "Tender Decumatation Fees",
+   "label": "Tender Documentation Fees",
    "precision": "0"
   },
   {
@@ -113,7 +149,7 @@
   {
    "fieldname": "goverment_section",
    "fieldtype": "Data",
-   "label": "Goverment Section",
+   "label": "Government Section",
    "translatable": 1
   },
   {
@@ -257,13 +293,199 @@
   {
    "fieldname": "screening_hijri_date",
    "fieldtype": "Date",
-   "label": "Screening Hijri date Copy"
+   "label": "Screening Hijri Date"
+  },
+  {
+   "fieldname": "classification_and_execution_tab",
+   "fieldtype": "Tab Break",
+   "label": "Classification and Execution"
+  },
+  {
+   "fieldname": "contractor_classification_section",
+   "fieldtype": "Section Break",
+   "label": "Contractor Classification"
+  },
+  {
+   "fieldname": "classification_required",
+   "fieldtype": "Select",
+   "label": "Classification Required",
+   "options": "Not Required\nRequired"
+  },
+  {
+   "fieldname": "classification_details",
+   "fieldtype": "Small Text",
+   "label": "Classification Details"
+  },
+  {
+   "fieldname": "execution_location_section",
+   "fieldtype": "Section Break",
+   "label": "Execution Location and Delivery Site"
+  },
+  {
+   "fieldname": "execution_place",
+   "fieldtype": "Data",
+   "label": "Execution Place"
+  },
+  {
+   "fieldname": "execution_region",
+   "fieldtype": "Data",
+   "label": "Execution Region"
+  },
+  {
+   "fieldname": "execution_city",
+   "fieldtype": "Data",
+   "label": "Execution City"
+  },
+  {
+   "fieldname": "execution_details",
+   "fieldtype": "Small Text",
+   "label": "Execution Details"
+  },
+  {
+   "fieldname": "column_break_execution",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "competition_activity",
+   "fieldtype": "Data",
+   "label": "Competition Activity"
+  },
+  {
+   "fieldname": "includes_supply_items",
+   "fieldtype": "Select",
+   "label": "Includes Supply Items",
+   "options": "Yes\nNo"
+  },
+  {
+   "default": "0",
+   "fieldname": "construction_works",
+   "fieldtype": "Check",
+   "label": "Construction Works"
+  },
+  {
+   "default": "0",
+   "fieldname": "maintenance_and_operation_works",
+   "fieldtype": "Check",
+   "label": "Maintenance and Operation Works"
+  },
+  {
+   "fieldname": "quantity_tables_tab",
+   "fieldtype": "Tab Break",
+   "label": "Quantity Tables"
+  },
+  {
+   "fieldname": "quantity_group",
+   "fieldtype": "Data",
+   "label": "Quantity Group"
+  },
+  {
+   "fieldname": "quantity_table_name",
+   "fieldtype": "Data",
+   "label": "Quantity Table Name"
+  },
+  {
+   "fieldname": "quantity_items",
+   "fieldtype": "Table",
+   "label": "Quantity Items",
+   "options": "Tender Quantity Item"
+  },
+  {
+   "fieldname": "attachments_tab",
+   "fieldtype": "Tab Break",
+   "label": "Attachments"
+  },
+  {
+   "fieldname": "terms_and_specifications_file",
+   "fieldtype": "Attach",
+   "label": "Terms and Specifications File"
+  },
+  {
+   "fieldname": "supporting_file",
+   "fieldtype": "Attach",
+   "label": "Supporting File"
+  },
+  {
+   "fieldname": "local_content_supporting_file",
+   "fieldtype": "Attach",
+   "label": "Local Content Supporting File"
+  },
+  {
+   "fieldname": "attachment_notes",
+   "fieldtype": "Small Text",
+   "label": "Attachment Notes"
+  },
+  {
+   "fieldname": "competition_news_tab",
+   "fieldtype": "Tab Break",
+   "label": "Competition News"
+  },
+  {
+   "fieldname": "creation_datetime",
+   "fieldtype": "Datetime",
+   "label": "Creation Date"
+  },
+  {
+   "fieldname": "news_bid_opening_datetime",
+   "fieldtype": "Datetime",
+   "label": "Bid Opening Date"
+  },
+  {
+   "fieldname": "invitation_sent_date",
+   "fieldtype": "Date",
+   "label": "Invitation Sent Date"
+  },
+  {
+   "fieldname": "award_date",
+   "fieldtype": "Date",
+   "label": "Award Date"
+  },
+  {
+   "fieldname": "competition_news_notes",
+   "fieldtype": "Small Text",
+   "label": "Competition News Notes"
+  },
+  {
+   "fieldname": "local_content_mechanisms_tab",
+   "fieldtype": "Tab Break",
+   "label": "Local Content Mechanisms"
+  },
+  {
+   "fieldname": "applied_local_content_mechanisms",
+   "fieldtype": "Small Text",
+   "label": "Applied Local Content Mechanisms"
+  },
+  {
+   "fieldname": "local_content_terms_file",
+   "fieldtype": "Attach",
+   "label": "Local Content Terms File"
+  },
+  {
+   "fieldname": "local_content_notes",
+   "fieldtype": "Small Text",
+   "label": "Local Content Notes"
+  },
+  {
+   "fieldname": "evaluation_criteria_tab",
+   "fieldtype": "Tab Break",
+   "label": "Evaluation Criteria"
+  },
+  {
+   "fieldname": "technical_evaluation_criteria",
+   "fieldtype": "Table",
+   "label": "Technical Evaluation Criteria",
+   "options": "Tender Evaluation Criterion"
+  },
+  {
+   "fieldname": "financial_evaluation_criteria",
+   "fieldtype": "Table",
+   "label": "Financial Evaluation Criteria",
+   "options": "Tender Evaluation Criterion"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-05-23 14:04:36.282356",
+ "modified": "2026-05-23 14:30:00.000000",
  "modified_by": "Administrator",
  "module": "Tender",
  "name": "Tender",
