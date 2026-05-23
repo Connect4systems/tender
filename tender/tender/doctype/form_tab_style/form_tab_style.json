@@ -1,0 +1,144 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "format:{document_type}-{tab_fieldname}",
+ "creation": "2026-05-23 15:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "enabled",
+  "document_type",
+  "tab_fieldname",
+  "tab_label",
+  "icon",
+  "section_break_colors",
+  "inactive_background_color",
+  "inactive_text_color",
+  "column_break_colors",
+  "active_background_color",
+  "active_text_color",
+  "section_break_layout",
+  "tab_height",
+  "one_line_tabs"
+ ],
+ "fields": [
+  {
+   "default": "1",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Enabled"
+  },
+  {
+   "fieldname": "document_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Document Type",
+   "options": "DocType",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tab_fieldname",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Tab Fieldname",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tab_label",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Tab Label"
+  },
+  {
+   "default": "none",
+   "fieldname": "icon",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Icon",
+   "options": "none\ngrid\nclock\nlist\ntable\npaperclip\nnews\nhome\ncolumns\nsettings\nstar\nheart\nfile\nbriefcase\ncalendar\nmap-pin"
+  },
+  {
+   "fieldname": "section_break_colors",
+   "fieldtype": "Section Break",
+   "label": "Colors"
+  },
+  {
+   "default": "#f4f4f4",
+   "fieldname": "inactive_background_color",
+   "fieldtype": "Color",
+   "label": "Inactive Background Color"
+  },
+  {
+   "default": "#4d555a",
+   "fieldname": "inactive_text_color",
+   "fieldtype": "Color",
+   "label": "Inactive Text Color"
+  },
+  {
+   "fieldname": "column_break_colors",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "#2f8b5d",
+   "fieldname": "active_background_color",
+   "fieldtype": "Color",
+   "label": "Active Background Color"
+  },
+  {
+   "default": "#ffffff",
+   "fieldname": "active_text_color",
+   "fieldtype": "Color",
+   "label": "Active Text Color"
+  },
+  {
+   "fieldname": "section_break_layout",
+   "fieldtype": "Section Break",
+   "label": "Layout"
+  },
+  {
+   "default": "74",
+   "fieldname": "tab_height",
+   "fieldtype": "Int",
+   "label": "Tab Height"
+  },
+  {
+   "default": "1",
+   "fieldname": "one_line_tabs",
+   "fieldtype": "Check",
+   "label": "Keep Tabs in One Line"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-05-23 15:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Tender",
+ "name": "Form Tab Style",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "All"
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -90,3 +90,17 @@ Pending,قيد الانتظار
 Approved,معتمدة
 Finantial and Technical Together,ملف واحد للعرض الفني والمالي معا
 Financial and technical,العرض الفني والمالي
+Form Tab Style,تنسيق تبويب النموذج
+Customize Tab Styles,تخصيص تنسيق التبويبات
+Document Type,نوع المستند
+Tab Fieldname,اسم حقل التبويب
+Tab Label,عنوان التبويب
+Icon,الأيقونة
+Inactive Background Color,لون خلفية التبويب غير النشط
+Inactive Text Color,لون نص التبويب غير النشط
+Active Background Color,لون خلفية التبويب النشط
+Active Text Color,لون نص التبويب النشط
+Tab Height,ارتفاع التبويب
+Keep Tabs in One Line,إبقاء التبويبات في سطر واحد
+Tab styles saved,تم حفظ تنسيق التبويبات
+One Line,سطر واحد
