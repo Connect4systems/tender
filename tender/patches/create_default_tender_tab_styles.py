@@ -1,9 +1,13 @@
 import frappe
 
+from tender.patches.create_docfield_tab_style_fields import add_docfield_table_columns
+
 
 def execute():
 	if not frappe.db.exists("DocType", "Form Tab Style") or not frappe.db.exists("DocType", "Tender"):
 		return
+
+	add_docfield_table_columns()
 
 	tabs = [
 		("basic_information_tab", "Basic Information", "grid"),
