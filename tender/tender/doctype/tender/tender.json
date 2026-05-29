@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "naming_series:naming_series",
  "creation": "2026-05-23 13:06:27.487079",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -81,7 +82,8 @@
   "local_content_notes",
   "evaluation_criteria_tab",
   "technical_evaluation_criteria",
-  "financial_evaluation_criteria"
+  "financial_evaluation_criteria",
+  "naming_series"
  ],
  "fields": [
   {
@@ -100,63 +102,96 @@
    "fieldname": "tender_name",
    "fieldtype": "Data",
    "label": "Tender Name",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1,
    "translatable": 1
   },
   {
    "fieldname": "tender_nomber",
    "fieldtype": "Float",
    "label": "Tender Number",
-   "precision": "0"
+   "precision": "0",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "tender_purpose",
    "fieldtype": "Data",
-   "label": "Tender Purpose"
+   "label": "Tender Purpose",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "tender_decumatation_fees",
    "fieldtype": "Currency",
    "label": "Tender Documentation Fees",
-   "precision": "0"
+   "precision": "0",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "tender_position",
    "fieldtype": "Select",
    "label": "Tender Official Status",
-   "options": "Draft\nPending\nApproved"
+   "options": "Draft\nPending\nApproved",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "contract_period",
    "fieldtype": "Float",
    "label": "Contract Period (Month)",
-   "precision": "0"
+   "precision": "0",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "insurance_required",
    "fieldtype": "Select",
    "label": "Insurance Required",
-   "options": "Yes\nNo"
+   "options": "Yes\nNo",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "column_break_fwgv",
-   "fieldtype": "Column Break"
+   "fieldtype": "Column Break",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "tender_type",
    "fieldtype": "Select",
    "label": "Tender Type",
-   "options": "General Tender"
+   "options": "General Tender",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "tender_status",
    "fieldtype": "Data",
    "label": "Tender Status",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1,
    "translatable": 1
   },
   {
    "fieldname": "goverment_section",
    "fieldtype": "Data",
    "label": "Government Section",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1,
    "translatable": 1
   },
   {
@@ -164,6 +199,9 @@
    "fieldtype": "Select",
    "label": "Tender Offering Method",
    "options": "Finantial and Technical Together\nFinancial and technical",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1,
    "translatable": 1
   },
   {
@@ -171,18 +209,27 @@
    "fieldname": "initial_guarantee_required",
    "fieldtype": "Select",
    "label": "Initial guarantee required",
-   "options": "Yes\nNo"
+   "options": "Yes\nNo",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "primary_warranty_address",
    "fieldtype": "Data",
    "label": "Primary warranty address",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1,
    "translatable": 1
   },
   {
    "fieldname": "final_guarantee",
    "fieldtype": "Currency",
-   "label": "Final guarantee"
+   "label": "Final guarantee",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "addresses_and_dates_tab",
@@ -199,115 +246,187 @@
   {
    "fieldname": "deadline_for_receiving_inquiries_section",
    "fieldtype": "Section Break",
-   "label": "Deadline for receiving inquiries"
+   "label": "Deadline for receiving inquiries",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "gregorian_date",
    "fieldtype": "Date",
-   "label": "Gregorian date"
+   "label": "Gregorian date",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "column_break_scrb",
-   "fieldtype": "Column Break"
+   "fieldtype": "Column Break",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "hijri_date",
    "fieldtype": "Date",
-   "label": "Hijri date"
+   "label": "Hijri date",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "column_break_oeca",
-   "fieldtype": "Column Break"
+   "fieldtype": "Column Break",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "time",
    "fieldtype": "Time",
-   "label": "Time"
+   "label": "Time",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "deadline_for_submitting_offers_section",
    "fieldtype": "Section Break",
-   "label": "Deadline for submitting offers"
+   "label": "Deadline for submitting offers",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "offer_gregorian_date",
    "fieldtype": "Date",
-   "label": "Offer Gregorian date"
+   "label": "Offer Gregorian date",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "column_break_hoee",
-   "fieldtype": "Column Break"
+   "fieldtype": "Column Break",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "offer_hijri_date",
    "fieldtype": "Date",
-   "label": "Offer Hijri date"
+   "label": "Offer Hijri date",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "column_break_govh",
-   "fieldtype": "Column Break"
+   "fieldtype": "Column Break",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "offer_time",
    "fieldtype": "Time",
-   "label": "Offer Time"
+   "label": "Offer Time",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "bid_opening_date_section",
    "fieldtype": "Section Break",
-   "label": "Bid opening date"
+   "label": "Bid opening date",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "open_gregorian_date",
    "fieldtype": "Date",
-   "label": "Open Gregorian date"
+   "label": "Open Gregorian date",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "column_break_rurq",
-   "fieldtype": "Column Break"
+   "fieldtype": "Column Break",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "open_hijri_date",
    "fieldtype": "Date",
-   "label": "Open Hijri date"
+   "label": "Open Hijri date",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "column_break_aefo",
-   "fieldtype": "Column Break"
+   "fieldtype": "Column Break",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "open_time",
    "fieldtype": "Time",
-   "label": "Open Time"
+   "label": "Open Time",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "date_of_screening_offers_section",
    "fieldtype": "Section Break",
-   "label": "Date of screening offers"
+   "label": "Date of screening offers",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "screening",
    "fieldtype": "Select",
    "label": "Screening",
-   "options": "Yes\nNo"
+   "options": "Yes\nNo",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "column_break_ezkc",
-   "fieldtype": "Column Break"
+   "fieldtype": "Column Break",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "screening_gregorian_date",
    "fieldtype": "Date",
-   "label": "Screening Gregorian date"
+   "label": "Screening Gregorian date",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "column_break_cngu",
-   "fieldtype": "Column Break"
+   "fieldtype": "Column Break",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "screening_hijri_date",
    "fieldtype": "Date",
-   "label": "Screening Hijri Date"
+   "label": "Screening Hijri Date",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "classification_and_execution_tab",
@@ -324,70 +443,109 @@
   {
    "fieldname": "contractor_classification_section",
    "fieldtype": "Section Break",
-   "label": "Contractor Classification"
+   "label": "Contractor Classification",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "classification_required",
    "fieldtype": "Select",
    "label": "Classification Required",
-   "options": "Not Required\nRequired"
+   "options": "Not Required\nRequired",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "classification_details",
    "fieldtype": "Small Text",
-   "label": "Classification Details"
+   "label": "Classification Details",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "execution_location_section",
    "fieldtype": "Section Break",
-   "label": "Execution Location and Delivery Site"
+   "label": "Execution Location and Delivery Site",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "execution_place",
    "fieldtype": "Data",
-   "label": "Execution Place"
+   "label": "Execution Place",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "execution_region",
    "fieldtype": "Data",
-   "label": "Execution Region"
+   "label": "Execution Region",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "execution_city",
    "fieldtype": "Data",
-   "label": "Execution City"
+   "label": "Execution City",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "execution_details",
    "fieldtype": "Small Text",
-   "label": "Execution Details"
+   "label": "Execution Details",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "column_break_execution",
-   "fieldtype": "Column Break"
+   "fieldtype": "Column Break",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "competition_activity",
    "fieldtype": "Data",
-   "label": "Competition Activity"
+   "label": "Competition Activity",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "includes_supply_items",
    "fieldtype": "Select",
    "label": "Includes Supply Items",
-   "options": "Yes\nNo"
+   "options": "Yes\nNo",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "default": "0",
    "fieldname": "construction_works",
    "fieldtype": "Check",
-   "label": "Construction Works"
+   "label": "Construction Works",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "default": "0",
    "fieldname": "maintenance_and_operation_works",
    "fieldtype": "Check",
-   "label": "Maintenance and Operation Works"
+   "label": "Maintenance and Operation Works",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "quantity_tables_tab",
@@ -404,18 +562,27 @@
   {
    "fieldname": "quantity_group",
    "fieldtype": "Data",
-   "label": "Quantity Group"
+   "label": "Quantity Group",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "quantity_table_name",
    "fieldtype": "Data",
-   "label": "Quantity Table Name"
+   "label": "Quantity Table Name",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "quantity_items",
    "fieldtype": "Table",
    "label": "Quantity Items",
-   "options": "Tender Quantity Item"
+   "options": "Tender Quantity Item",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "attachments_tab",
@@ -432,22 +599,34 @@
   {
    "fieldname": "terms_and_specifications_file",
    "fieldtype": "Attach",
-   "label": "Terms and Specifications File"
+   "label": "Terms and Specifications File",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "supporting_file",
    "fieldtype": "Attach",
-   "label": "Supporting File"
+   "label": "Supporting File",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "local_content_supporting_file",
    "fieldtype": "Attach",
-   "label": "Local Content Supporting File"
+   "label": "Local Content Supporting File",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "attachment_notes",
    "fieldtype": "Small Text",
-   "label": "Attachment Notes"
+   "label": "Attachment Notes",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "competition_news_tab",
@@ -464,27 +643,42 @@
   {
    "fieldname": "creation_datetime",
    "fieldtype": "Datetime",
-   "label": "Creation Date"
+   "label": "Creation Date",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "news_bid_opening_datetime",
    "fieldtype": "Datetime",
-   "label": "Bid Opening Date"
+   "label": "Bid Opening Date",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "invitation_sent_date",
    "fieldtype": "Date",
-   "label": "Invitation Sent Date"
+   "label": "Invitation Sent Date",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "award_date",
    "fieldtype": "Date",
-   "label": "Award Date"
+   "label": "Award Date",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "competition_news_notes",
    "fieldtype": "Small Text",
-   "label": "Competition News Notes"
+   "label": "Competition News Notes",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "local_content_mechanisms_tab",
@@ -501,17 +695,26 @@
   {
    "fieldname": "applied_local_content_mechanisms",
    "fieldtype": "Small Text",
-   "label": "Applied Local Content Mechanisms"
+   "label": "Applied Local Content Mechanisms",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "local_content_terms_file",
    "fieldtype": "Attach",
-   "label": "Local Content Terms File"
+   "label": "Local Content Terms File",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "local_content_notes",
    "fieldtype": "Small Text",
-   "label": "Local Content Notes"
+   "label": "Local Content Notes",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "evaluation_criteria_tab",
@@ -529,22 +732,36 @@
    "fieldname": "technical_evaluation_criteria",
    "fieldtype": "Table",
    "label": "Technical Evaluation Criteria",
-   "options": "Tender Evaluation Criterion"
+   "options": "Tender Evaluation Criterion",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
   },
   {
    "fieldname": "financial_evaluation_criteria",
    "fieldtype": "Table",
    "label": "Financial Evaluation Criteria",
-   "options": "Tender Evaluation Criterion"
+   "options": "Tender Evaluation Criterion",
+   "tab_style_height": 74,
+   "tab_style_icon": "none",
+   "tab_style_one_line": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "TND-.YY.-,MM.-.###",
+   "tab_style_icon": "none"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-05-23 14:30:00.000000",
+ "modified": "2026-05-23 16:00:50.017183",
  "modified_by": "Administrator",
  "module": "Tender",
  "name": "Tender",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
@@ -558,11 +775,24 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales User",
+   "share": 1,
+   "write": 1
   }
  ],
  "row_format": "Dynamic",
  "rows_threshold_for_grid_search": 20,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1
 }
