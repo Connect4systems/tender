@@ -1,13 +1,71 @@
 frappe.ui.form.on("Tender", {
 	refresh(frm) {
+		set_tender_hijri_dates(frm);
 		apply_tender_tab_fallback(frm);
 		setTimeout(() => apply_tender_tab_fallback(frm), 300);
 	},
 	onload_post_render(frm) {
+		set_tender_hijri_dates(frm);
 		apply_tender_tab_fallback(frm);
 		setTimeout(() => apply_tender_tab_fallback(frm), 300);
 	},
+	before_save(frm) {
+		set_tender_hijri_dates(frm);
+	},
+	gregorian_date(frm) {
+		set_tender_hijri_date(frm, "gregorian_date", "hijri_date");
+	},
+	offer_gregorian_date(frm) {
+		set_tender_hijri_date(frm, "offer_gregorian_date", "offer_hijri_date");
+	},
+	open_gregorian_date(frm) {
+		set_tender_hijri_date(frm, "open_gregorian_date", "open_hijri_date");
+	},
+	screening_gregorian_date(frm) {
+		set_tender_hijri_date(frm, "screening_gregorian_date", "screening_hijri_date");
+	},
 });
+
+function set_tender_hijri_dates(frm) {
+	const date_pairs = [
+		["gregorian_date", "hijri_date"],
+		["offer_gregorian_date", "offer_hijri_date"],
+		["open_gregorian_date", "open_hijri_date"],
+		["screening_gregorian_date", "screening_hijri_date"],
+	];
+
+	date_pairs.forEach(([gregorian_field, hijri_field]) => {
+		set_tender_hijri_date(frm, gregorian_field, hijri_field);
+	});
+}
+
+function set_tender_hijri_date(frm, gregorian_field, hijri_field) {
+	const hijri_date = tender_gregorian_to_hijri(frm.doc[gregorian_field]);
+
+	if ((frm.doc[hijri_field] || "") !== hijri_date) {
+		frm.set_value(hijri_field, hijri_date);
+	}
+}
+
+function tender_gregorian_to_hijri(gregorian_date) {
+	if (!gregorian_date) return "";
+
+	const date = new Date(`${gregorian_date}T00:00:00`);
+	if (Number.isNaN(date.getTime())) return "";
+
+	const formatter = new Intl.DateTimeFormat("en-u-ca-islamic-umalqura", {
+		day: "2-digit",
+		month: "2-digit",
+		year: "numeric",
+	});
+	const parts = Object.fromEntries(
+		formatter.formatToParts(date)
+			.filter((part) => ["day", "month", "year"].includes(part.type))
+			.map((part) => [part.type, part.value.padStart(2, "0")])
+	);
+
+	return parts.year && parts.month && parts.day ? `${parts.year}-${parts.month}-${parts.day}` : "";
+}
 
 function apply_tender_tab_fallback(frm) {
 	if (!document.getElementById("tender-tab-fallback-style")) {
