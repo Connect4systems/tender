@@ -213,8 +213,7 @@
   {
    "fieldname": "hijri_date",
    "fieldtype": "Data",
-   "label": "Hijri date",
-   "read_only": 1
+   "label": "Hijri date"
   },
   {
    "fieldname": "column_break_oeca",
@@ -242,8 +241,7 @@
   {
    "fieldname": "offer_hijri_date",
    "fieldtype": "Data",
-   "label": "Offer Hijri date",
-   "read_only": 1
+   "label": "Offer Hijri date"
   },
   {
    "fieldname": "column_break_govh",
@@ -271,8 +269,7 @@
   {
    "fieldname": "open_hijri_date",
    "fieldtype": "Data",
-   "label": "Open Hijri date",
-   "read_only": 1
+   "label": "Open Hijri date"
   },
   {
    "fieldname": "column_break_aefo",
@@ -310,8 +307,7 @@
   {
    "fieldname": "screening_hijri_date",
    "fieldtype": "Data",
-   "label": "Screening Hijri Date",
-   "read_only": 1
+   "label": "Screening Hijri Date"
   },
   {
    "fieldname": "classification_and_execution_tab",

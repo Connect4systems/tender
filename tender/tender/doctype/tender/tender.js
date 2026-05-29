@@ -1,16 +1,13 @@
 frappe.ui.form.on("Tender", {
 	refresh(frm) {
-		set_tender_hijri_dates(frm);
+		set_tender_hijri_dates(frm, true);
 		apply_tender_tab_fallback(frm);
 		setTimeout(() => apply_tender_tab_fallback(frm), 300);
 	},
 	onload_post_render(frm) {
-		set_tender_hijri_dates(frm);
+		set_tender_hijri_dates(frm, true);
 		apply_tender_tab_fallback(frm);
 		setTimeout(() => apply_tender_tab_fallback(frm), 300);
-	},
-	before_save(frm) {
-		set_tender_hijri_dates(frm);
 	},
 	gregorian_date(frm) {
 		set_tender_hijri_date(frm, "gregorian_date", "hijri_date");
@@ -26,7 +23,7 @@ frappe.ui.form.on("Tender", {
 	},
 });
 
-function set_tender_hijri_dates(frm) {
+function set_tender_hijri_dates(frm, only_if_empty = false) {
 	const date_pairs = [
 		["gregorian_date", "hijri_date"],
 		["offer_gregorian_date", "offer_hijri_date"],
@@ -35,11 +32,13 @@ function set_tender_hijri_dates(frm) {
 	];
 
 	date_pairs.forEach(([gregorian_field, hijri_field]) => {
-		set_tender_hijri_date(frm, gregorian_field, hijri_field);
+		set_tender_hijri_date(frm, gregorian_field, hijri_field, only_if_empty);
 	});
 }
 
-function set_tender_hijri_date(frm, gregorian_field, hijri_field) {
+function set_tender_hijri_date(frm, gregorian_field, hijri_field, only_if_empty = false) {
+	if (only_if_empty && frm.doc[hijri_field]) return;
+
 	const hijri_date = tender_gregorian_to_hijri(frm.doc[gregorian_field]);
 
 	if ((frm.doc[hijri_field] || "") !== hijri_date) {
@@ -55,16 +54,16 @@ function tender_gregorian_to_hijri(gregorian_date) {
 
 	const formatter = new Intl.DateTimeFormat("en-u-ca-islamic-umalqura", {
 		day: "2-digit",
-		month: "2-digit",
+		month: "long",
 		year: "numeric",
 	});
 	const parts = Object.fromEntries(
 		formatter.formatToParts(date)
 			.filter((part) => ["day", "month", "year"].includes(part.type))
-			.map((part) => [part.type, part.value.padStart(2, "0")])
+			.map((part) => [part.type, part.type === "day" ? part.value.padStart(2, "0") : part.value])
 	);
 
-	return parts.year && parts.month && parts.day ? `${parts.year}-${parts.month}-${parts.day}` : "";
+	return parts.year && parts.month && parts.day ? `${parts.day} ${parts.month} ${parts.year}` : "";
 }
 
 function apply_tender_tab_fallback(frm) {
